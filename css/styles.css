@@ -940,7 +940,13 @@ footer {
    Responsive
    ======================================== */
 @media (max-width: 768px) {
-    /* Nav */
+    /* Nav — switch to flexbox so logo stays left, nav-right stays right */
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     .nav-hamburger {
         display: flex;
     }
