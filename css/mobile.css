@@ -95,15 +95,17 @@
     line-height: 1.6;
 }
 
-/* ---- Service cards — full width ---- */
+/* ---- Expertise — 2x2 grid on mobile ---- */
 .services-grid {
-    flex-direction: column;
-    align-items: stretch;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
 }
 
 .service-card {
     flex-basis: auto !important;
     width: 100%;
+    margin: 0 !important;
 }
 
 /* ---- Reduce large section padding ---- */
@@ -114,9 +116,9 @@
     padding: 4rem 5%;
 }
 
-/* ---- About stats wrap nicely ---- */
+/* ---- Hide about stats on mobile ---- */
 .about-stats {
-    justify-content: center;
+    display: none;
 }
 
 /* ---- Hero title — smaller on phone ---- */
