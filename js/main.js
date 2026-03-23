@@ -22,6 +22,7 @@
         window.scrollTo(0, 0);
         initHeroAnimation();
         initLogoFadeIn();
+        initHamburger();
     });
 
     window.addEventListener('load', function() {
@@ -150,6 +151,28 @@
             }, 300);
 
         }, 6800);
+    }
+
+    /**
+     * Mobile Hamburger Menu
+     */
+    function initHamburger() {
+        const btn = document.querySelector('.nav-hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        if (!btn || !navLinks) return;
+
+        btn.addEventListener('click', function() {
+            const isOpen = navLinks.classList.toggle('open');
+            btn.setAttribute('aria-expanded', isOpen);
+        });
+
+        // Close menu when a link is clicked
+        navLinks.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                navLinks.classList.remove('open');
+                btn.setAttribute('aria-expanded', false);
+            });
+        });
     }
 
     /**
