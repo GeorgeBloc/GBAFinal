@@ -1,0 +1,116 @@
+/* ========================================
+   Mobile-Only Styles
+   Loaded only on screens <= 768px via media attribute in HTML.
+   Overrides without touching desktop CSS.
+   ======================================== */
+
+/* ---- Gallery images ---- */
+/* Containers need explicit heights so object-fit: cover works on mobile */
+.ork-gallery-item,
+.sh-gallery-item,
+.tlc-gallery-item {
+    height: 240px;
+}
+
+.ork-gallery-item.wide,
+.sh-gallery-item.wide,
+.tlc-gallery-item.wide {
+    height: 200px;
+}
+
+.ork-gallery-item img,
+.sh-gallery-item img,
+.tlc-gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ---- Inner page heroes ---- */
+.ork-hero,
+.sh-hero,
+.tlc-hero {
+    padding: 7rem 5% 2rem;
+}
+
+/* ---- Inner page content ---- */
+.ork-content,
+.sh-content,
+.tlc-content {
+    padding: 2rem 5%;
+}
+
+.ork-areas,
+.sh-gallery,
+.tlc-gallery,
+.ork-gallery {
+    padding: 1rem 5% 3rem;
+}
+
+/* ---- Homepage experience logos ---- */
+.experience-bar {
+    padding: 3rem 5%;
+}
+
+.experience-logos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.experience-logo {
+    height: 80px !important;
+    transform: none !important;
+}
+
+/* ---- Testimonials — single column ---- */
+.testimonial-grid {
+    grid-template-columns: 1fr;
+}
+
+/* ---- Service cards — full width ---- */
+.services-grid {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.service-card {
+    flex-basis: auto !important;
+    width: 100%;
+}
+
+/* ---- Reduce large section padding ---- */
+.services,
+.about,
+.testimonials,
+.cta {
+    padding: 4rem 5%;
+}
+
+/* ---- About stats wrap nicely ---- */
+.about-stats {
+    justify-content: center;
+}
+
+/* ---- Hero title — smaller on phone ---- */
+.hero-title {
+    font-size: clamp(1.8rem, 8vw, 2.6rem) !important;
+    min-height: 1.4em;
+}
+
+/* ---- Hero tagline ---- */
+.hero-tagline {
+    font-size: 0.95rem;
+}
+
+/* ---- Nav logo smaller ---- */
+.logo {
+    font-size: 1.1rem;
+}
+
+/* ---- Nav CTA — hide on mobile to save space, menu has contact ---- */
+.nav-cta {
+    display: none;
+}
