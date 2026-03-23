@@ -48,26 +48,51 @@
     padding: 1rem 5% 3rem;
 }
 
-/* ---- Homepage experience logos ---- */
+/* ---- Homepage experience logos — horizontal row on mobile ---- */
 .experience-bar {
     padding: 3rem 5%;
 }
 
 .experience-logos {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    gap: 2rem;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.experience-item {
+    justify-self: unset !important;
 }
 
 .experience-logo {
-    height: 80px !important;
+    height: 60px !important;
+    transform: none !important;
+    width: auto;
+}
+
+.experience-logo.sion-hill {
+    height: 90px !important;
     transform: none !important;
 }
 
-/* ---- Testimonials — single column ---- */
+.experience-logo.orrick {
+    height: 50px !important;
+}
+
+/* ---- Testimonials — 2-column compact grid ---- */
 .testimonial-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+}
+
+.testimonial-card {
+    padding: 1rem;
+}
+
+.testimonial-card p {
+    font-size: 0.8rem;
+    line-height: 1.6;
 }
 
 /* ---- Service cards — full width ---- */
@@ -98,6 +123,21 @@
 .hero-title {
     font-size: clamp(1.8rem, 8vw, 2.6rem) !important;
     min-height: 1.4em;
+}
+
+/* ---- Fix "I'm exploring opportunities" overflow ---- */
+.hero-title #intro,
+.hero-title #greeting,
+.hero-title #finalName {
+    white-space: normal !important;
+    width: 90vw !important;
+    text-align: center;
+}
+
+.hero-title #intro .im-text {
+    white-space: normal !important;
+    display: block;
+    text-align: center;
 }
 
 /* ---- Hero tagline ---- */
